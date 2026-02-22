@@ -26,7 +26,7 @@ function createVideo(url) {
   $video.setAttribute("controls", "");
   $video.setAttribute("playsinline", "");
   $video.setAttribute("muted", "");
-  $video.setAttribute("preload", "auto");
+  $video.setAttribute("preload", "metadata");
 
   return $video;
 }
