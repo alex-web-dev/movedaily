@@ -42,11 +42,11 @@ if ($register) {
     //   .filter(($cb) => $cb.checked)
     //   .map(($cb) => $cb.closest(".checkbox-input").querySelector(".checkbox-input__text").textContent.trim());
 
-    window.location.href = "/";
+    window.location.href = "index.html";
   });
 
   const $step2Skip = $step2.querySelector(".auth-form__skip");
   $step2Skip.addEventListener("click", () => {
-    window.location.href = "/";
+    window.location.href = "index.html";
   });
 }

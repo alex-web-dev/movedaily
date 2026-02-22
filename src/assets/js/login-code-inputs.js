@@ -54,7 +54,7 @@ function checkCode($inputs) {
   }
 
   if (code === CORRECT_CODE) {
-    window.location.href = "/";
+    window.location.href = "index.html";
   } else {
     $inputs.forEach(($input) => $input.classList.add(ERROR_CLASS));
   }
