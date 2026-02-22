@@ -35,8 +35,6 @@ if ($trainingAccess) {
   });
 }
 
-
-
 function setActivePlan($trainingAccess, plan) {
   const $contents = $trainingAccess.querySelectorAll(".training-access__content");
 
