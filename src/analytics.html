@@ -1,0 +1,857 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1" />
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="shortcut icon" href="assets/img/favicon.png" />
+    <title>MoveDaily | Аналитика</title>
+  </head>
+
+  <body class="body">
+    <header class="header">
+      <div class="header__content">
+        <a class="logo header__logo" href="index.html">
+          <img class="logo__img" src="assets/img/logo.svg" alt="" />
+          <span class="text text--rs logo__name">MoveDaily</span>
+        </a>
+        <nav class="menu header__menu">
+          <ul class="menu__list">
+            <li class="menu__item">
+              <a class="text text--xs text--rs text--gray menu__link" href="index.html">Дашборд</a>
+            </li>
+            <li class="menu__item">
+              <a class="text text--xs text--rs text--gray menu__link menu__link--active" href="#">Аналитика</a>
+            </li>
+            <li class="menu__item">
+              <a class="text text--xs text--rs text--gray menu__link" href="history.html">История</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header__user">
+          <a class="btn btn--px-xs btn--border-gray header__user-login" href="login.html">Войти</a>
+          <a class="btn-figure header__user-profile" href="profile.html">
+            <img class="btn-figure__img" src="assets/img/icons/user-white.svg" alt="" />
+          </a>
+        </div>
+        <button class="menu-toggle header__menu-toggle js-toggle-menu">
+          <span class="menu-toggle__lines"></span>
+        </button>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="dashboard dashboard--pr-xs main__dashboard">
+        <div class="dashboard__content">
+          <h1 class="title title--3 title--rs dashboard__title dashboard__title--mb-xs dashboard__title--mobile-hide">Аналитика</h1>
+          <div class="dashboard__sections">
+            <div class="muscle-panel muscle-panel--analytics box dashboard__section dashboard__section--xl-col-6">
+              <div class="muscle-panel__header">
+                <div class="box-header muscle-panel__header-main">
+                  <div class="box-header__icon">
+                    <img class="box-header__icon-img" src="assets/img/dashboard/sections-icons/diagnostics.png" alt="" />
+                  </div>
+                  <div class="box-header__info">
+                    <h2 class="text text--rs text--dark box-header__title">Диагностика</h2>
+                    <div class="text text--xs text--gray box-header__text">Слабые зоны и прогресс по мышцам</div>
+                  </div>
+                </div>
+                <div class="select muscle-panel__header-select dropdown">
+                  <button class="select-btn select__btn dropdown__btn">
+                    <div class="select-btn__content">
+                      <input type="text" class="text text--rs text--xs select-btn__text" value="26.12.2025" readonly />
+                      <img class="select-btn__icon" src="assets/img/icons/down-gray-600.svg" alt="" />
+                    </div>
+                  </button>
+                  <div class="select__body dropdown__main">
+                    <div class="select__main js-simplebar">
+                      <div class="select__list">
+                        <button class="text text--rs text--xs select__item" data-select-text="26.12.2025">26.12.2025</button>
+                        <button class="text text--rs text--xs select__item" data-select-text="27.12.2025">27.12.2025</button>
+                        <button class="text text--rs text--xs select__item" data-select-text="28.12.2025">28.12.2025</button>
+                        <button class="text text--rs text--xs select__item" data-select-text="29.12.2025">29.12.2025</button>
+                        <button class="text text--rs text--xs select__item" data-select-text="30.12.2025">30.12.2025</button>
+                        <button class="text text--rs text--xs select__item" data-select-text="31.12.2025">31.12.2025</button>
+                        <button class="text text--rs text--xs select__item" data-select-text="01.01.2026">01.01.2026</button>
+                        <button class="text text--rs text--xs select__item" data-select-text="02.01.2026">02.01.2026</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="muscle-panel__content">
+                <div class="muscle-panel__main">
+                  <div class="nav-btns muscle-panel__nav-btns">
+                    <div class="nav-btns__list tabs-btns" data-tabs-name="muscle-panel">
+                      <button class="nav-btn nav-btns__btn tabs-btns__btn tabs-btns__btn--active">Вид спереди</button>
+                      <button class="nav-btn nav-btns__btn tabs-btns__btn">Вид сзади</button>
+                    </div>
+                  </div>
+                  <div class="tabs-list muscle-panel__tabs" data-tabs-name="muscle-panel">
+                    <div class="tabs-list__item tabs-list__item--active">
+                      <div
+                        class="muscle-panel__body"
+                        data-config='{
+                          "forearm_1_left": "attention",
+                          "forearm_1_right": "attention",
+                          "calf_1_left": "critical",
+                          "calf_1_right": "critical"
+                        }'></div>
+                    </div>
+                    <div class="tabs-list__item">
+                      <div
+                        class="muscle-panel__body"
+                        data-config-type="back"
+                        data-config='{
+                          "latissimus_dorsi_left": "attention",
+                          "latissimus_dorsi_right": "attention",
+                          "bicep_femoris_1_left": "critical",
+                          "bicep_femoris_1_right": "critical",
+                          "forearm_back_1_left": "attention",
+                          "forearm_back_1_right": "attention",
+                          "achilles_tendon_left": "attention",
+                          "achilles_tendon_right": "attention"
+                        }'></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="muscle-panel__footer">
+                  <button class="btn muscle-panel__btn js-open-popup" data-popup-name="diagnostics">Новая диагностика</button>
+                </div>
+                <div class="muscle-panel__legend">
+                  <div class="legend-item muscle-panel__legend-item">
+                    <span class="legend-item__dot" style="background: #e6e6e6"></span>
+                    <span class="text text--2xs text--gray legend-item__text">Отлично</span>
+                  </div>
+                  <div class="legend-item muscle-panel__legend-item">
+                    <span class="legend-item__dot" style="background: #ffe4a8"></span>
+                    <span class="text text--2xs text--gray legend-item__text">Требует внимания</span>
+                  </div>
+                  <div class="legend-item muscle-panel__legend-item">
+                    <span class="legend-item__dot" style="background: #ffa8a8"></span>
+                    <span class="text text--2xs text--gray legend-item__text">Критично</span>
+                  </div>
+                </div>
+                <div class="muscle-panel__spheres">
+                  <img class="muscle-panel__sphere" src="assets/img/dashboard/sphere-shadow.svg" alt="" />
+                  <img class="muscle-panel__sphere" src="assets/img/dashboard/sphere-shadow.svg" alt="" />
+                  <img class="muscle-panel__sphere" src="assets/img/dashboard/sphere-shadow.svg" alt="" />
+                  <img class="muscle-panel__sphere" src="assets/img/dashboard/sphere-shadow.svg" alt="" />
+                  <img class="muscle-panel__sphere" src="assets/img/dashboard/sphere-shadow.svg" alt="" />
+                  <img class="muscle-panel__sphere" src="assets/img/dashboard/sphere-shadow.svg" alt="" />
+                  <img class="muscle-panel__sphere" src="assets/img/dashboard/sphere-shadow.svg" alt="" />
+                  <img class="muscle-panel__sphere" src="assets/img/dashboard/sphere-shadow.svg" alt="" />
+                  <img class="muscle-panel__sphere" src="assets/img/dashboard/sphere-shadow.svg" alt="" />
+                </div>
+              </div>
+            </div>
+
+            <div class="dashboard__section dashboard__section--xl-col-6 dashboard__section--mobile-first">
+              <div class="changes box">
+                <div class="changes__info">
+                  <h2 class="title title--5 title--rs changes__title">Что изменилось?</h2>
+                  <p class="text text--gray changes__text">Узнайте, какие зоны улучшаются и какие требуют внимания</p>
+                  <button class="btn btn--border-gray-350 btn--full changes__btn">Сравнить результат</button>
+                </div>
+                <img class="changes__img" src="assets/img/analytics/changes.png" alt="" />
+                <div class="changes__spheres">
+                  <img class="changes__sphere" src="assets/img/dashboard/sphere-shadow.svg" alt="" />
+                  <img class="changes__sphere" src="assets/img/dashboard/sphere-shadow.svg" alt="" />
+                  <img class="changes__sphere" src="assets/img/dashboard/sphere-shadow.svg" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div class="mobile-menu header__mobile-menu">
+      <div class="mobile-menu__content">
+        <div class="mobile-menu__main">
+          <ul class="mobile-menu__list">
+            <li class="mobile-menu__item">
+              <a class="text text--gray mobile-menu__link" href="index.html">Дашборд</a>
+            </li>
+            <li class="mobile-menu__item">
+              <a class="text text--gray mobile-menu__link mobile-menu__link--active" href="#">Аналитика</a>
+            </li>
+            <li class="mobile-menu__item">
+              <a class="text text--gray mobile-menu__link" href="history.html">История</a>
+            </li>
+            <li class="mobile-menu__item">
+              <a class="text text--gray mobile-menu__link" href="profile.html">Личный кабинет</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="mobile-menu__backdrop js-close-menu"></div>
+    </div>
+
+    <div class="popup" data-popup-name="results-dates">
+      <div class="popup__body">
+        <div class="popup__dialog popup__dialog--mobile-bottom">
+          <div class="results-dates box popup__results-dates">
+            <div class="text text--sm text--medium results-dates__title">Укажите даты диагностик, которые вы хотите сравнить.</div>
+            <div class="results-dates__main">
+              <div class="results-dates__select">
+                <div class="text text--xs text--gray text--leading-2 results-dates__select-label">Дата А</div>
+                <div class="select results-dates__select-main dropdown">
+                  <button class="select-btn select__btn dropdown__btn">
+                    <div class="select-btn__content">
+                      <input type="text" class="text text--rs text--xs select-btn__text" value="26.12.2025" readonly />
+                      <img class="select-btn__icon" src="assets/img/icons/down-gray-600.svg" alt="" />
+                    </div>
+                  </button>
+                  <div class="select__body dropdown__main">
+                    <div class="select__main js-simplebar">
+                      <div class="select__list">
+                        <button class="text text--rs text--xs select__item" data-select-text="26.12.2025">26.12.2025</button>
+                        <button class="text text--rs text--xs select__item" data-select-text="27.12.2025">27.12.2025</button>
+                        <button class="text text--rs text--xs select__item" data-select-text="28.12.2025">28.12.2025</button>
+                        <button class="text text--rs text--xs select__item" data-select-text="29.12.2025">29.12.2025</button>
+                        <button class="text text--rs text--xs select__item" data-select-text="30.12.2025">30.12.2025</button>
+                        <button class="text text--rs text--xs select__item" data-select-text="31.12.2025">31.12.2025</button>
+                        <button class="text text--rs text--xs select__item" data-select-text="01.01.2026">01.01.2026</button>
+                        <button class="text text--rs text--xs select__item" data-select-text="02.01.2026">02.01.2026</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <img class="results-dates__img" src="assets/img/analytics/changes.png" alt="" />
+              <div class="results-dates__select">
+                <div class="text text--xs text--gray text--leading-2 results-dates__select-label">Дата Б</div>
+                <div class="select results-dates__select-main dropdown">
+                  <button class="select-btn select__btn dropdown__btn">
+                    <div class="select-btn__content">
+                      <input type="text" class="text text--rs text--xs select-btn__text" value="" placeholder="-" readonly />
+                      <img class="select-btn__icon" src="assets/img/icons/down-gray-600.svg" alt="" />
+                    </div>
+                  </button>
+                  <div class="select__body dropdown__main">
+                    <div class="select__main js-simplebar">
+                      <div class="select__list">
+                        <button class="text text--rs text--xs select__item" data-select-text="26.12.2025">26.12.2025</button>
+                        <button class="text text--rs text--xs select__item" data-select-text="27.12.2025">27.12.2025</button>
+                        <button class="text text--rs text--xs select__item" data-select-text="28.12.2025">28.12.2025</button>
+                        <button class="text text--rs text--xs select__item" data-select-text="29.12.2025">29.12.2025</button>
+                        <button class="text text--rs text--xs select__item" data-select-text="30.12.2025">30.12.2025</button>
+                        <button class="text text--rs text--xs select__item" data-select-text="31.12.2025">31.12.2025</button>
+                        <button class="text text--rs text--xs select__item" data-select-text="01.01.2026">01.01.2026</button>
+                        <button class="text text--rs text--xs select__item" data-select-text="02.01.2026">02.01.2026</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="btn btn--border-gray-350 btn--full results-dates__btn">Сравнить</button>
+            <button class="icon results-dates__close js-close-this-popup">
+              <img class="icon__img" src="assets/img/icons/close-gray-thin.svg" alt="" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="popup popup--black" data-popup-name="results">
+      <div class="popup__body">
+        <div class="popup__dialog popup__dialog--mobile-full">
+          <div class="results box popup__results">
+            <div class="title title--4 title--4 results__title">Результат сравнения:</div>
+            <div class="results__info-list">
+              <div class="result-info results__info-item">
+                <div class="text text-medium text--primary-800 text--leading-15 result-info__title">Улучшилось</div>
+                <div class="result-info__details">
+                  <div class="result-info__detail">
+                    <span class="text text--xs text--leading-15 result-info__detail-text">Гибкость плеч</span>
+                    <span class="result-info__detail-value">
+                      <img class="result-info__detail-icon" src="assets/img/icons/arrow-up-primary-800.svg" alt="" />
+                      <span class="text text--xs text--primary-800 text--leading-15">12%</span>
+                    </span>
+                  </div>
+                  <div class="result-info__detail">
+                    <span class="text text--xs text--leading-15 result-info__detail-text">Баланс</span>
+                    <span class="result-info__detail-value">
+                      <img class="result-info__detail-icon" src="assets/img/icons/arrow-up-primary-800.svg" alt="" />
+                      <span class="text text--xs text--primary-800 text--leading-15">8%%</span>
+                    </span>
+                  </div>
+                  <div class="result-info__detail">
+                    <span class="text text--xs text--leading-15 result-info__detail-text">Подвижность тазобедренного сустава</span>
+                    <span class="result-info__detail-value">
+                      <img class="result-info__detail-icon" src="assets/img/icons/arrow-up-primary-800.svg" alt="" />
+                      <span class="text text--xs text--primary-800 text--leading-15">6%</span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="result-info result-info--danger results__info-item">
+                <div class="text text-medium text--danger text--leading-15 result-info__title">Ухудшилось</div>
+                <div class="result-info__details">
+                  <div class="result-info__detail">
+                    <span class="text text--xs text--leading-15 result-info__detail-text">Сила кора</span>
+                    <span class="result-info__detail-value">
+                      <img class="result-info__detail-icon" src="assets/img/icons/arrow-down-danger.svg" alt="" />
+                      <span class="text text--xs text--danger text--leading-15">-4%</span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="results__body">
+              <div class="nav-btns results__nav-btns">
+                <div class="nav-btns__list tabs-btns" data-tabs-name="results">
+                  <button class="nav-btn nav-btns__btn tabs-btns__btn tabs-btns__btn--active">Вид спереди</button>
+                  <button class="nav-btn nav-btns__btn tabs-btns__btn">Вид сзади</button>
+                </div>
+              </div>
+              <div class="tabs-list results__tabs" data-tabs-name="results">
+                <div class="tabs-list__item tabs-list__item--active">
+                  <div class="results__main">
+                    <div class="muscle-panel results__panel">
+                      <div class="muscle-panel__header">
+                        <div class="box-header box-header--items-center muscle-panel__header-main">
+                          <div class="box-header__icon">
+                            <img class="box-header__icon-img" src="assets/img/dashboard/sections-icons/diagnostics.png" alt="" />
+                          </div>
+                          <div class="box-header__info">
+                            <h2 class="text text--rs text--dark box-header__title">Диагностика от</h2>
+                          </div>
+                          <button class="select-btn select-btn--danger box-header__select">
+                            <div class="select-btn__content">
+                              <input type="text" class="text text--rs text--xs select-btn__text" value="26.12.2025" readonly />
+                            </div>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="muscle-panel__content">
+                        <div class="muscle-panel__main">
+                          <div
+                            class="muscle-panel__body"
+                            data-config='{
+                              "forearm_1_left": "attention",
+                              "forearm_1_right": "attention",
+                              "calf_1_left": "critical",
+                              "calf_1_right": "critical"
+                            }'></div>
+                        </div>
+                        <div class="muscle-panel__legend">
+                          <div class="legend-item muscle-panel__legend-item">
+                            <span class="legend-item__dot" style="background: #e6e6e6"></span>
+                            <span class="text text--2xs text--gray legend-item__text">Отлично</span>
+                          </div>
+                          <div class="legend-item muscle-panel__legend-item">
+                            <span class="legend-item__dot" style="background: #ffe4a8"></span>
+                            <span class="text text--2xs text--gray legend-item__text">Требует внимания</span>
+                          </div>
+                          <div class="legend-item muscle-panel__legend-item">
+                            <span class="legend-item__dot" style="background: #ffa8a8"></span>
+                            <span class="text text--2xs text--gray legend-item__text">Критично</span>
+                          </div>
+                        </div>
+                        <div class="muscle-panel__spheres">
+                          <img class="muscle-panel__sphere" src="assets/img/dashboard/sphere-shadow.svg" alt="" />
+                          <img class="muscle-panel__sphere" src="assets/img/dashboard/sphere-shadow.svg" alt="" />
+                          <img class="muscle-panel__sphere" src="assets/img/dashboard/sphere-shadow.svg" alt="" />
+                          <img class="muscle-panel__sphere" src="assets/img/dashboard/sphere-shadow.svg" alt="" />
+                          <img class="muscle-panel__sphere" src="assets/img/dashboard/sphere-shadow.svg" alt="" />
+                          <img class="muscle-panel__sphere" src="assets/img/dashboard/sphere-shadow.svg" alt="" />
+                          <img class="muscle-panel__sphere" src="assets/img/dashboard/sphere-shadow.svg" alt="" />
+                          <img class="muscle-panel__sphere" src="assets/img/dashboard/sphere-shadow.svg" alt="" />
+                          <img class="muscle-panel__sphere" src="assets/img/dashboard/sphere-shadow.svg" alt="" />
+                        </div>
+                      </div>
+                    </div>
+                    <img class="results__main-arrow" src="assets/img/icons/arrow-long-light.svg" alt="" />
+                    <div class="muscle-panel results__panel">
+                      <div class="muscle-panel__header">
+                        <div class="box-header box-header--items-center muscle-panel__header-main">
+                          <div class="box-header__icon">
+                            <img class="box-header__icon-img" src="assets/img/dashboard/sections-icons/diagnostics.png" alt="" />
+                          </div>
+                          <div class="box-header__info">
+                            <h2 class="text text--rs text--dark box-header__title">Диагностика от</h2>
+                          </div>
+                          <button class="select-btn select-btn--gray-250 box-header__select">
+                            <div class="select-btn__content">
+                              <input type="text" class="text text--rs text--xs select-btn__text" value="01.01.2026" readonly />
+                            </div>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="muscle-panel__content">
+                        <div class="muscle-panel__main">
+                          <div
+                            class="muscle-panel__body"
+                            data-config='{
+                              "forearm_1_left": "attention",
+                              "forearm_1_right": "attention"
+                            }'></div>
+                        </div>
+                        <div class="muscle-panel__legend">
+                          <div class="legend-item muscle-panel__legend-item">
+                            <span class="legend-item__dot" style="background: #e6e6e6"></span>
+                            <span class="text text--2xs text--gray legend-item__text">Отлично</span>
+                          </div>
+                          <div class="legend-item muscle-panel__legend-item">
+                            <span class="legend-item__dot" style="background: #ffe4a8"></span>
+                            <span class="text text--2xs text--gray legend-item__text">Требует внимания</span>
+                          </div>
+                          <div class="legend-item muscle-panel__legend-item">
+                            <span class="legend-item__dot" style="background: #ffa8a8"></span>
+                            <span class="text text--2xs text--gray legend-item__text">Критично</span>
+                          </div>
+                        </div>
+                        <div class="muscle-panel__spheres">
+                          <img class="muscle-panel__sphere" src="assets/img/dashboard/sphere-shadow.svg" alt="" />
+                          <img class="muscle-panel__sphere" src="assets/img/dashboard/sphere-shadow.svg" alt="" />
+                          <img class="muscle-panel__sphere" src="assets/img/dashboard/sphere-shadow.svg" alt="" />
+                          <img class="muscle-panel__sphere" src="assets/img/dashboard/sphere-shadow.svg" alt="" />
+                          <img class="muscle-panel__sphere" src="assets/img/dashboard/sphere-shadow.svg" alt="" />
+                          <img class="muscle-panel__sphere" src="assets/img/dashboard/sphere-shadow.svg" alt="" />
+                          <img class="muscle-panel__sphere" src="assets/img/dashboard/sphere-shadow.svg" alt="" />
+                          <img class="muscle-panel__sphere" src="assets/img/dashboard/sphere-shadow.svg" alt="" />
+                          <img class="muscle-panel__sphere" src="assets/img/dashboard/sphere-shadow.svg" alt="" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tabs-list__item">
+                  <div class="results__main">
+                    <div class="muscle-panel results__panel">
+                      <div class="muscle-panel__header">
+                        <div class="box-header box-header--items-center muscle-panel__header-main">
+                          <div class="box-header__icon">
+                            <img class="box-header__icon-img" src="assets/img/dashboard/sections-icons/diagnostics.png" alt="" />
+                          </div>
+                          <div class="box-header__info">
+                            <h2 class="text text--rs text--dark box-header__title">Диагностика от</h2>
+                          </div>
+                          <button class="select-btn select-btn--danger box-header__select">
+                            <div class="select-btn__content">
+                              <input type="text" class="text text--rs text--xs select-btn__text" value="26.12.2025" readonly />
+                            </div>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="muscle-panel__content">
+                        <div class="muscle-panel__main">
+                          <div
+                            class="muscle-panel__body"
+                            data-config-type="back"
+                            data-config='{
+                              "latissimus_dorsi_left": "attention",
+                              "latissimus_dorsi_right": "attention",
+                              "bicep_femoris_1_left": "critical",
+                              "bicep_femoris_1_right": "critical",
+                              "forearm_back_1_left": "attention",
+                              "forearm_back_1_right": "attention",
+                              "achilles_tendon_left": "attention",
+                              "achilles_tendon_right": "attention"
+                            }'></div>
+                        </div>
+                        <div class="muscle-panel__legend">
+                          <div class="legend-item muscle-panel__legend-item">
+                            <span class="legend-item__dot" style="background: #e6e6e6"></span>
+                            <span class="text text--2xs text--gray legend-item__text">Отлично</span>
+                          </div>
+                          <div class="legend-item muscle-panel__legend-item">
+                            <span class="legend-item__dot" style="background: #ffe4a8"></span>
+                            <span class="text text--2xs text--gray legend-item__text">Требует внимания</span>
+                          </div>
+                          <div class="legend-item muscle-panel__legend-item">
+                            <span class="legend-item__dot" style="background: #ffa8a8"></span>
+                            <span class="text text--2xs text--gray legend-item__text">Критично</span>
+                          </div>
+                        </div>
+                        <div class="muscle-panel__spheres">
+                          <img class="muscle-panel__sphere" src="assets/img/dashboard/sphere-shadow.svg" alt="" />
+                          <img class="muscle-panel__sphere" src="assets/img/dashboard/sphere-shadow.svg" alt="" />
+                          <img class="muscle-panel__sphere" src="assets/img/dashboard/sphere-shadow.svg" alt="" />
+                          <img class="muscle-panel__sphere" src="assets/img/dashboard/sphere-shadow.svg" alt="" />
+                          <img class="muscle-panel__sphere" src="assets/img/dashboard/sphere-shadow.svg" alt="" />
+                          <img class="muscle-panel__sphere" src="assets/img/dashboard/sphere-shadow.svg" alt="" />
+                          <img class="muscle-panel__sphere" src="assets/img/dashboard/sphere-shadow.svg" alt="" />
+                          <img class="muscle-panel__sphere" src="assets/img/dashboard/sphere-shadow.svg" alt="" />
+                          <img class="muscle-panel__sphere" src="assets/img/dashboard/sphere-shadow.svg" alt="" />
+                        </div>
+                      </div>
+                    </div>
+                    <img class="results__main-arrow" src="assets/img/icons/arrow-long-light.svg" alt="" />
+                    <div class="muscle-panel results__panel">
+                      <div class="muscle-panel__header">
+                        <div class="box-header box-header--items-center muscle-panel__header-main">
+                          <div class="box-header__icon">
+                            <img class="box-header__icon-img" src="assets/img/dashboard/sections-icons/diagnostics.png" alt="" />
+                          </div>
+                          <div class="box-header__info">
+                            <h2 class="text text--rs text--dark box-header__title">Диагностика от</h2>
+                          </div>
+                          <button class="select-btn select-btn--gray-250 box-header__select">
+                            <div class="select-btn__content">
+                              <input type="text" class="text text--rs text--xs select-btn__text" value="01.01.2026" readonly />
+                            </div>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="muscle-panel__content">
+                        <div class="muscle-panel__main">
+                          <div
+                            class="muscle-panel__body"
+                            data-config-type="back"
+                            data-config='{
+                              "latissimus_dorsi_left": "attention",
+                              "latissimus_dorsi_right": "attention",
+                              "forearm_back_1_left": "attention",
+                              "forearm_back_1_right": "attention"
+                            }'></div>
+                        </div>
+                        <div class="muscle-panel__legend">
+                          <div class="legend-item muscle-panel__legend-item">
+                            <span class="legend-item__dot" style="background: #e6e6e6"></span>
+                            <span class="text text--2xs text--gray legend-item__text">Отлично</span>
+                          </div>
+                          <div class="legend-item muscle-panel__legend-item">
+                            <span class="legend-item__dot" style="background: #ffe4a8"></span>
+                            <span class="text text--2xs text--gray legend-item__text">Требует внимания</span>
+                          </div>
+                          <div class="legend-item muscle-panel__legend-item">
+                            <span class="legend-item__dot" style="background: #ffa8a8"></span>
+                            <span class="text text--2xs text--gray legend-item__text">Критично</span>
+                          </div>
+                        </div>
+                        <div class="muscle-panel__spheres">
+                          <img class="muscle-panel__sphere" src="assets/img/dashboard/sphere-shadow.svg" alt="" />
+                          <img class="muscle-panel__sphere" src="assets/img/dashboard/sphere-shadow.svg" alt="" />
+                          <img class="muscle-panel__sphere" src="assets/img/dashboard/sphere-shadow.svg" alt="" />
+                          <img class="muscle-panel__sphere" src="assets/img/dashboard/sphere-shadow.svg" alt="" />
+                          <img class="muscle-panel__sphere" src="assets/img/dashboard/sphere-shadow.svg" alt="" />
+                          <img class="muscle-panel__sphere" src="assets/img/dashboard/sphere-shadow.svg" alt="" />
+                          <img class="muscle-panel__sphere" src="assets/img/dashboard/sphere-shadow.svg" alt="" />
+                          <img class="muscle-panel__sphere" src="assets/img/dashboard/sphere-shadow.svg" alt="" />
+                          <img class="muscle-panel__sphere" src="assets/img/dashboard/sphere-shadow.svg" alt="" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <button class="icon results-dates__close js-close-this-popup">
+              <img class="icon__img" src="assets/img/icons/close-gray-thin.svg" alt="" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="popup" data-popup-name="diagnostics">
+      <div class="popup__body">
+        <div class="popup__dialog popup__dialog--mobile-full">
+          <div class="video-section video-section--diagnostics popup__video-section">
+            <div class="title title--3 title--rs video-section__title">Диагностика</div>
+            <div class="video-section__main">
+              <div class="video-section__left">
+                <div class="video video-section__video" data-src="assets/video/video.mp4" data-start-time="5"></div>
+                <div class="video-info video-section__video-info">
+                  <div class="video-info__header">
+                    <div class="title title--4 title--rs title--dark video-info__title">Планка на локтях</div>
+                    <div class="time-label video-info__label">
+                      <span class="icon icon--2xs time-label__icon">
+                        <svg class="icon__img" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M7.99961 14.4C11.5342 14.4 14.3996 11.5346 14.3996 7.99998C14.3996 4.46535 11.5342 1.59998 7.99961 1.59998C4.46499 1.59998 1.59961 4.46535 1.59961 7.99998C1.59961 11.5346 4.46499 14.4 7.99961 14.4Z"
+                            stroke-width="1.6" />
+                          <path d="M8 4.80005V8.00005L10.4 10.4" stroke-width="1.6" stroke-linecap="round" />
+                        </svg>
+                      </span>
+                      <span class="text text--medium text--leading-15 time-label__text">45 сек</span>
+                    </div>
+                  </div>
+                  <p class="text text--sm text video-info__text">Удерживайте положение планки, напрягая мышцы кора</p>
+                  <div class="time-label video-info__mobile-label">
+                    <span class="icon icon--2xs time-label__icon">
+                      <svg class="icon__img" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M7.99961 14.4C11.5342 14.4 14.3996 11.5346 14.3996 7.99998C14.3996 4.46535 11.5342 1.59998 7.99961 1.59998C4.46499 1.59998 1.59961 4.46535 1.59961 7.99998C1.59961 11.5346 4.46499 14.4 7.99961 14.4Z"
+                          stroke-width="1.6" />
+                        <path d="M8 4.80005V8.00005L10.4 10.4" stroke-width="1.6" stroke-linecap="round" />
+                      </svg>
+                    </span>
+                    <span class="text text--medium text--leading-15 time-label__text">45 сек</span>
+                  </div>
+                </div>
+              </div>
+              <div class="video-section__right">
+                <div class="video-section__steps">
+                  <div class="video-section__step video-section__step--active">
+                    <div class="training-process">
+                      <div class="training-process__footer">
+                        <button class="btn btn--iflex btn--full training-process__footer-btn">
+                          <span>Начать</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="video-section__step">
+                    <div class="training-process">
+                      <div class="training-process__progress-box">
+                        <div class="training-process__progress-header">
+                          <div class="text text--xs text--gray training-process__progress-label">Упражнение</div>
+                          <div class="text text--sm text--medium training-process__progress-values">0/0</div>
+                        </div>
+                        <div class="progress generates-count__progress" data-value="0" data-max="5">
+                          <div class="progress__bar"></div>
+                        </div>
+                      </div>
+                      <div class="training-timer training-process__timer">
+                        <div class="text text--gray training-timer__label">Осталось</div>
+                        <div class="text text--rs training-timer__value" data-timer-seconds="45">0:00</div>
+                      </div>
+                      <div class="training-process__btns">
+                        <button class="training-btn training-btn--active training-process__btn">
+                          <div class="training-btn__icon-box">
+                            <svg
+                              class="training-btn__icon"
+                              width="11"
+                              height="11"
+                              viewBox="0 0 11 11"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                d="M5.11487 0.639359L0.639359 5.11487L5.11487 9.59038"
+                                stroke-width="1.27872"
+                                stroke-linecap="round"
+                                stroke-linejoin="round" />
+                              <path d="M9.59033 5.11487H0.639578" stroke-width="1.27872" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                          </div>
+                          <div class="text text--rs text--gray text--leading-15 training-btn__title">Левая</div>
+                          <div class="text text--xs text--gray training-btn__text">Сейчас</div>
+                        </button>
+                        <button class="training-btn training-process__btn">
+                          <div class="training-btn__icon-box">
+                            <svg
+                              class="training-btn__icon training-btn__icon--reverse"
+                              width="11"
+                              height="11"
+                              viewBox="0 0 11 11"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                d="M5.11487 0.639359L0.639359 5.11487L5.11487 9.59038"
+                                stroke-width="1.27872"
+                                stroke-linecap="round"
+                                stroke-linejoin="round" />
+                              <path d="M9.59033 5.11487H0.639578" stroke-width="1.27872" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                          </div>
+                          <div class="text text--rs text--gray text--leading-15 training-btn__title">Правая</div>
+                          <div class="text text--xs text--gray training-btn__text">Ожидает</div>
+                        </button>
+                      </div>
+                      <div class="training-process__footer">
+                        <div class="training-process__steps-btns">
+                          <button
+                            class="btn btn--iflex btn--py-xl btn--border-gray btn--text-left btn--justify-start btn--rounded-xs training-process__steps-btn">
+                            <span class="icon icon--3xs btn__icon btn__icon--mx-sm">
+                              <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                  d="M4.51172 8.45898L0.564038 4.5113L4.51172 0.563622"
+                                  stroke-width="1.12791"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round" />
+                              </svg>
+                            </span>
+                            <span>Назад</span>
+                          </button>
+                          <button
+                            class="btn btn--iflex btn--py-xl btn--border-gray btn--text-left btn--justify-start btn--rounded-xs training-process__steps-btn">
+                            <span>Пропустить</span>
+                            <span class="icon icon--3xs btn__icon btn__icon--mx-sm">
+                              <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                  d="M5.07511 0.563477L9.02279 4.51116L5.07511 8.45884M0.563477 0.563477L4.51116 4.51116L0.563477 8.45884"
+                                  stroke-width="1.12791"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round" />
+                              </svg>
+                            </span>
+                          </button>
+                        </div>
+                        <button class="btn btn--iflex btn--full training-process__footer-btn">
+                          <span class="icon icon--2xs btn__icon btn__icon--mx-sm">
+                            <img class="icon icon--4xs" src="assets/img/icons/check.svg" alt="" />
+                          </span>
+                          <span>Выполнено</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="video-section__step">
+                    <div class="training-quiz video-section__quiz">
+                      <div class="text text--rs text--lg text--leading-15 training-quiz__title">Как прошло упражнение?</div>
+                      <div class="training-quiz__group">
+                        <div class="training-quiz__group-header">
+                          <div class="text text--medium text--leading-15 training-quiz__label">
+                            Насколько тяжело вам было выполнять это упражнение?
+                          </div>
+                        </div>
+                        <div class="checkbox-inputs training-quiz__rate" data-single-toggle>
+                          <label class="checkbox-input training-quiz__rate-item">
+                            <input class="checkbox-input__field" type="checkbox" name="training-rate" value="1" />
+                            <span class="checkbox-input__switch checkbox-input__switch--fill checkbox-input__switch--column-center">
+                              <div class="title title--rs title--3 title--gray checkbox-input__rate-num">1</div>
+                              <div class="text text--2xs text--gray text--leading-15 checkbox-input__rate-text">Легко</div>
+                            </span>
+                          </label>
+                          <label class="checkbox-input training-quiz__rate-item">
+                            <input class="checkbox-input__field" type="checkbox" name="training-rate" value="2" />
+                            <span class="checkbox-input__switch checkbox-input__switch--fill checkbox-input__switch--column-center">
+                              <div class="title title--rs title--3 title--gray checkbox-input__rate-num">2</div>
+                              <div class="text text--2xs text--gray text--leading-15 checkbox-input__rate-text">Норма</div>
+                            </span>
+                          </label>
+                          <label class="checkbox-input training-quiz__rate-item">
+                            <input class="checkbox-input__field" type="checkbox" name="training-rate" value="3" />
+                            <span class="checkbox-input__switch checkbox-input__switch--fill checkbox-input__switch--column-center">
+                              <div class="title title--rs title--3 title--gray checkbox-input__rate-num">3</div>
+                              <div class="text text--2xs text--gray text--leading-15 checkbox-input__rate-text">Средне</div>
+                            </span>
+                          </label>
+                          <label class="checkbox-input training-quiz__rate-item">
+                            <input class="checkbox-input__field" type="checkbox" name="training-rate" value="4" />
+                            <span class="checkbox-input__switch checkbox-input__switch--fill checkbox-input__switch--column-center">
+                              <div class="title title--rs title--3 title--gray checkbox-input__rate-num">4</div>
+                              <div class="text text--2xs text--gray text--leading-15 checkbox-input__rate-text">Тяжело</div>
+                            </span>
+                          </label>
+                          <label class="checkbox-input training-quiz__rate-item">
+                            <input class="checkbox-input__field" type="checkbox" name="training-rate" value="5" />
+                            <span class="checkbox-input__switch checkbox-input__switch--fill checkbox-input__switch--column-center">
+                              <div class="title title--rs title--3 title--gray checkbox-input__rate-num">5</div>
+                              <div class="text text--2xs text--gray text--leading-15 checkbox-input__rate-text">Не делаю</div>
+                            </span>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="training-quiz__group">
+                        <div class="training-quiz__group-header">
+                          <div class="text text--medium text--leading-15 training-quiz__label">Что вы чувствовали во время выполнения?</div>
+                          <div class="text text--xs text--leading-15 training-quiz__text">Можно выбрать несколько вариантов</div>
+                        </div>
+                        <div class="training-quiz__checkboxes">
+                          <label class="checkbox-input training-quiz__checkbox">
+                            <input class="checkbox-input__field" type="checkbox" name="training-feel" />
+                            <span class="checkbox-input__switch checkbox-input__switch--pr-sm">
+                              <span class="text text--13 text--medium text--gray text--leading-15 checkbox-input__text">Усталость</span>
+                              <span class="icon icon--sm checkbox-input__icon">
+                                <img src="assets/img/icons/check.svg" alt="" />
+                              </span>
+                            </span>
+                          </label>
+                          <label class="checkbox-input training-quiz__checkbox">
+                            <input class="checkbox-input__field" type="checkbox" name="training-feel" />
+                            <span class="checkbox-input__switch checkbox-input__switch--pr-sm">
+                              <span class="text text--13 text--medium text--gray text--leading-15 checkbox-input__text">
+                                Легкое напряжение
+                              </span>
+                              <span class="icon icon--sm checkbox-input__icon">
+                                <img src="assets/img/icons/check.svg" alt="" />
+                              </span>
+                            </span>
+                          </label>
+                          <label class="checkbox-input training-quiz__checkbox">
+                            <input class="checkbox-input__field" type="checkbox" name="training-feel" />
+                            <span class="checkbox-input__switch checkbox-input__switch--pr-sm">
+                              <span class="text text--13 text--medium text--gray text--leading-15 checkbox-input__text">
+                                Сильное напряжение
+                              </span>
+                              <span class="icon icon--sm checkbox-input__icon">
+                                <img src="assets/img/icons/check.svg" alt="" />
+                              </span>
+                            </span>
+                          </label>
+                          <label class="checkbox-input training-quiz__checkbox">
+                            <input class="checkbox-input__field" type="checkbox" name="training-feel" />
+                            <span class="checkbox-input__switch checkbox-input__switch--pr-sm">
+                              <span class="text text--13 text--medium text--gray text--leading-15 checkbox-input__text">Боль</span>
+                              <span class="icon icon--sm checkbox-input__icon">
+                                <img src="assets/img/icons/check.svg" alt="" />
+                              </span>
+                            </span>
+                          </label>
+                          <label class="checkbox-input training-quiz__checkbox">
+                            <input class="checkbox-input__field" type="checkbox" name="training-feel" />
+                            <span class="checkbox-input__switch checkbox-input__switch--pr-sm">
+                              <span class="text text--13 text--medium text--gray text--leading-15 checkbox-input__text">Легкость</span>
+                              <span class="icon icon--sm checkbox-input__icon">
+                                <img src="assets/img/icons/check.svg" alt="" />
+                              </span>
+                            </span>
+                          </label>
+                          <label class="checkbox-input training-quiz__checkbox">
+                            <input class="checkbox-input__field" type="checkbox" name="training-feel" />
+                            <span class="checkbox-input__switch checkbox-input__switch--pr-sm">
+                              <span class="text text--13 text--medium text--gray text--leading-15 checkbox-input__text">Дискомфорт</span>
+                              <span class="icon icon--sm checkbox-input__icon">
+                                <img src="assets/img/icons/check.svg" alt="" />
+                              </span>
+                            </span>
+                          </label>
+                          <label class="checkbox-input training-quiz__checkbox">
+                            <input class="checkbox-input__field" type="checkbox" name="training-feel" />
+                            <span class="checkbox-input__switch checkbox-input__switch--pr-sm">
+                              <span class="text text--13 text--medium text--gray text--leading-15 checkbox-input__text">Усталость</span>
+                              <span class="icon icon--sm checkbox-input__icon">
+                                <img src="assets/img/icons/check.svg" alt="" />
+                              </span>
+                            </span>
+                          </label>
+                          <label class="checkbox-input training-quiz__checkbox">
+                            <input class="checkbox-input__field" type="checkbox" name="training-feel" />
+                            <span class="checkbox-input__switch checkbox-input__switch--pr-sm">
+                              <span class="text text--13 text--medium text--gray text--leading-15 checkbox-input__text">Усталость</span>
+                              <span class="icon icon--sm checkbox-input__icon">
+                                <img src="assets/img/icons/check.svg" alt="" />
+                              </span>
+                            </span>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="training-quiz__footer">
+                        <button
+                          class="btn btn--iflex btn--py-xl btn--border-gray btn--text-left btn--justify-start btn--rounded-xs training-quiz__footer-btn">
+                          <span class="icon icon--3xs btn__icon btn__icon--mx-sm">
+                            <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                d="M4.51172 8.45898L0.564038 4.5113L4.51172 0.563622"
+                                stroke-width="1.12791"
+                                stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            </svg>
+                          </span>
+                          <span>Назад</span>
+                        </button>
+                        <button class="btn btn--text-sm btn--py-xl btn--rounded-xs training-quiz__footer-btn">Далее</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="icon video-section__close js-close-this-popup">
+              <img class="icon__img" src="assets/img/icons/close-gray.svg" alt="" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="popup-overlay"></div>
+  </body>
+</html>

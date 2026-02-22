@@ -1,0 +1,25 @@
+.activity {
+  &__header {
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+  }
+
+  &__total {
+    margin-top: 18px;
+
+  }
+
+  @media (max-width: 767px) {
+    &__header {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+
+    &__nav-btns {
+      width: 100%;
+    }
+  }
+}

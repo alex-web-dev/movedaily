@@ -1,0 +1,37 @@
+.video-info {
+  padding: 24px;
+  background-color: #fafafa;
+  border: 1px solid @color-gray-250;
+  border-radius: 20px;
+
+  &__header {
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+  }
+
+  &__label {
+    flex: none;
+  }
+
+  &__text {
+    color: #a3a4a6;
+  }
+
+  &__mobile-label {
+    display: none;
+  }
+
+  @media (max-width: 991px) {
+    &__label {
+      display: none;
+    }
+
+    &__mobile-label {
+      margin-top: 16px;
+      display: inline-flex;
+    }
+  }
+}

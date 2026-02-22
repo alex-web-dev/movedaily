@@ -1,0 +1,74 @@
+.training-process {
+  flex: auto;
+  display: flex;
+  flex-direction: column;
+
+  &__progress-header {
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  &__timer {
+    margin: 60px 0;
+
+    &--long {
+      margin: auto 0 0;
+      height: 270px;
+    }
+  }
+
+  &__btns {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+
+    &--hidden {
+      display: none;
+    }
+  }
+
+  &__steps-btns {
+    display: flex;
+    gap: 12px;
+  }
+
+  &__steps-btn {
+    padding-left: 19px;
+    padding-right: 19px;
+
+    .icon {
+      svg {
+        stroke: @color-gray;
+      }
+    }
+  }
+
+  &__footer {
+    margin-top: auto;
+    padding-top: 32px;
+  }
+
+  &__footer-btn {
+    margin-top: 12px;
+    padding-top: 42px;
+    padding-bottom: 42px;
+    border-radius: 26px;
+  }
+
+  @media (max-width: 991px) {
+    &__progress-box {
+      margin-bottom: 24px;
+    }
+
+    &__timer {
+      margin: 24px 0;
+      
+      &--long {
+        height: 180px;
+      }
+    }
+  }
+}

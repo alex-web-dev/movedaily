@@ -1,0 +1,19 @@
+.progress {
+  width: 100%;
+  height: 12px;
+  background-color: @color-gray-250;
+  overflow: hidden;
+  border-radius: 32px;
+
+  &--white {
+    background-color: @color-white;
+  }
+
+  &__bar {
+    height: 100%;
+    width: 0%;
+    background-color: @color-primary-300;
+    border-radius: 32px;
+    transition: width 0.35s;
+  }
+}

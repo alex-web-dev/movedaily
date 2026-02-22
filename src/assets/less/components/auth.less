@@ -1,0 +1,34 @@
+.auth {
+  display: flex;
+  height: 100vh;
+
+  &__form-box {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    flex: none;
+  }
+
+  &__form {
+    width: 370px;
+    max-width: 100%;
+    min-height: 455px;
+  }
+
+  &__banner {
+    flex: auto;
+  }
+
+  @media (max-width: 991px) {
+    &__form-box {
+      width: 100%;
+      background: linear-gradient(215.35deg, #E2C7FC -5.87%, rgba(157, 131, 245, 0.604952) 57.3%, rgba(255, 255, 255, 0.17) 126.87%);
+    }
+    
+    &__banner {
+      display: none;
+    }
+  }
+}

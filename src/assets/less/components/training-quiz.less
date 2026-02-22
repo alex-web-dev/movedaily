@@ -1,0 +1,75 @@
+.training-quiz {
+  padding: 24px;
+  flex: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  &__title {
+    margin-bottom: 8px;
+  }
+
+  &__group {
+    margin-top: 32px;
+  }
+
+  &__group-header {
+    margin-bottom: 12px;
+  }
+
+  &__label {
+    font-size: 15px;
+  }
+
+  &__text {
+    margin-top: 6px;
+    color: #99a1af;
+  }
+
+  &__rate {
+    display: flex;
+    gap: 6px;
+  }
+
+  &__rate-item {
+    flex: 1 1 0%;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  &__checkboxes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  &__checkbox {
+    width: calc(50% - 6px);
+    min-height: 64px;
+  }
+
+  &__footer {
+    padding-top: 32px;
+    display: flex;
+    gap: 12px;
+  }
+
+  &__footer-btn {
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 16px;
+    flex: auto;
+
+    &.btn--border-gray {
+      svg {
+        stroke: @color-gray;
+      }
+    }
+  }
+
+  @media (max-width: 991px) {
+    &__title {
+      margin-bottom: 0;
+    }
+  }
+}

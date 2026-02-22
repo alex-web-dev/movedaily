@@ -1,0 +1,14 @@
+.container {
+  width: 100%;
+  max-width: calc(@container-width + @container-offset * 2);
+  margin: 0 auto;
+  padding: 0 @container-offset;
+
+  @media (max-width: 767px) {
+    padding: 0 @container-offset-mobile;
+
+    &--md {
+      padding: 0;
+    }
+  }
+}

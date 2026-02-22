@@ -1,0 +1,77 @@
+.link {
+  line-height: 1.3;
+  font-weight: 400;
+  transition: color 0.3s;
+
+  &:hover {
+    color: @color-primary;
+  }
+
+  &__icon {
+    flex: 0 0 auto;
+
+    &:first-child:not(:last-child) {
+      margin-right: 8px;
+    }
+
+    &:last-child:not(:first-child) {
+      margin-left: 8px;
+    }
+  }
+
+  &--rs {
+    font-family: "RS", sans-serif;
+  }
+
+  &--xs {
+    font-size: 12px;
+  }
+
+  &--sm {
+    font-size: 14px;
+  }
+
+  &--lg {
+    font-size: 18px;
+  }
+
+  &--xl {
+    font-size: 20px;
+  }
+
+  &--medium {
+    font-weight: 500;
+  }
+
+  &--primary {
+    color: @color-primary;
+  }
+
+  &--white {
+    color: @color-white;
+  }
+
+  &--line {
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  &--upper {
+    text-transform: uppercase;
+  }
+
+  &--iflex {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &--flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

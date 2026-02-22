@@ -1,0 +1,24 @@
+.main {
+  padding-bottom: 28px;
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+
+  &__auth {
+    flex: auto;
+  }
+
+  &__dashboard {
+    margin: 134px auto 0;
+    width: 100%;
+    max-width: 1280px;
+  }
+
+  @media (max-width: 991px) {
+    padding-bottom: 0;
+
+    &__dashboard {
+      margin-top: 92px;
+    }
+  }
+}

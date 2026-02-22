@@ -1,0 +1,75 @@
+.training-access {
+  &__contents {
+    flex: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__content {
+    flex: auto;
+    display: none;
+    flex-direction: column;
+
+    &--active {
+      display: flex;
+    }
+  }
+  
+  &__header {
+    margin-bottom: 16px;
+  }
+  
+  &__available-box {
+    margin-top: auto;
+  }
+
+  &__available {
+    margin-top: 16px;
+  }
+
+  &__unavailable-functions {
+    margin-top: 12px;
+    display: none;
+  }
+
+  &--disabled &__unavailable-functions,
+  &__content--expired &__unavailable-functions {
+    display: block;
+  }
+
+  &__footer {
+    margin-top: auto;
+    padding-top: 24px;
+
+    &--unavailable {
+      display: none;
+    }
+  }
+
+  &--disabled &__footer--unavailable {
+    display: block;
+  }
+
+  &--disabled &__available {
+    display: none;
+  }
+
+  &--disabled &__generate-btn {
+    display: none;
+  }
+
+  &__subscribe-btn {
+    display: none;
+  }
+
+  &--disabled &__subscribe-btn,
+  &__content--expired &__subscribe-btn {
+    display: inline-flex;
+  }
+
+  @media (max-width: 767px) {
+    &__header {
+      display: none;
+    }
+  }
+}

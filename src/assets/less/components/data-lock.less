@@ -1,0 +1,29 @@
+[data-lock] {
+  position: relative;
+}
+
+[data-lock]:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 11;
+  backdrop-filter: blur(8px);
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 32px;
+}
+
+[data-lock]:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 12;
+  background: url("../../img/icons/lock.svg") center / contain no-repeat;
+  width: 29px;
+  height: 36px;
+}
+
+[data-lock] > * {
+  pointer-events: none;
+}

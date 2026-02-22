@@ -1,0 +1,43 @@
+.semi-progress {
+  width: 156px;
+  position: relative;
+
+  &__svg {
+    width: 100%;
+  }
+
+  &__track {
+    fill: none;
+    stroke: @color-gray-100;
+    stroke-width: 20;
+    stroke-linecap: round;
+  }
+
+  &__bar {
+    fill: none;
+    stroke: @color-second-300;
+    stroke-width: 20;
+    stroke-linecap: round;
+    transition: stroke-dashoffset 0.3s ease;
+    filter: drop-shadow(0px 0px 2.38095px rgba(8, 21, 36, 0.2));
+  }
+
+  &__dot {
+    fill: @color-second-300;
+    stroke: @color-white;
+    stroke-width: 7;
+    transition:
+      cx 0.3s ease,
+      cy 0.3s ease;
+    filter: drop-shadow(0px 1.72026px 5.16078px rgba(25, 33, 61, 0.14));
+  }
+
+  &__value {
+    position: absolute;
+    left: 50%;
+    bottom: 36px;
+    transform: translateX(-50%);
+    font-weight: bold;
+    opacity: 0.62;
+  }
+}

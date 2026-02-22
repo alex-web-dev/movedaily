@@ -1,0 +1,23 @@
+.training-type {
+  padding: 10px 8px 10px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  border: 0.5px solid #e3e1e1;
+  border-radius: 16px;
+  text-align: left;
+  transition: background 0.35s;
+
+  &:hover {
+    background-color: @color-primary;
+  }
+
+  &__text {
+    margin-top: 6px;
+  }
+
+  @media (max-width: 991px) {
+    padding: 20px 8px 20px 16px;
+  }
+}

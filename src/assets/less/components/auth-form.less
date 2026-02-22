@@ -1,0 +1,128 @@
+.auth-form {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  box-shadow:
+    0px 1px 3px rgba(0, 0, 0, 0.1),
+    0px 1px 2px -1px rgba(0, 0, 0, 0.1);
+  border-radius: 32px;
+
+  &--py-xl {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+
+  &__step {
+    flex: auto;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+
+    &--justify-center {
+      justify-content: center;
+    }
+
+    &--active {
+      display: flex;
+    }
+  }
+
+  &__text {
+    margin-top: 12px;
+  }
+
+  &__logo {
+    margin-bottom: 28px;
+    width: 84px;
+  }
+
+  &__inputs {
+    margin: 32px auto 0;
+    width: 100%;
+    max-width: 300px;
+
+    &--sm {
+      max-width: 278px;
+    }
+  }
+
+  &__code-inputs {
+    margin-top: 32px;
+  }
+
+  &__checkbox-group {
+    margin-top: 24px;
+    width: 100%;
+    max-height: 242px;
+  }
+
+  &__footer {
+    position: relative;
+    z-index: 1;
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+    &--pt-xl {
+      padding-top: 32px;
+    }
+  }
+
+  &__btn {
+    margin-top: 24px;
+
+    &--sm {
+      max-width: 300px;
+    }
+
+    &--mt-xs {
+      margin-top: 12px;
+    }
+    
+    &--hide {
+      display: none;
+    }
+  }
+
+  &__or {
+    margin-top: 28px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+
+    &:before,
+    &:after {
+      content: "";
+      display: inline-block;
+      height: 1px;
+      flex: 1 1 0%;
+      background-color: @color-gray-250;
+    }
+  }
+
+  &__or-text {
+    flex: none;
+  }
+
+  &__social {
+    margin-top: 24px;
+    width: 100%;
+  }
+
+  &__social-btns {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -12px;
+    margin-left: -12px;
+  }
+
+  &__social-btn {
+    margin-top: 12px;
+    margin-left: 12px;
+    width: calc(25% - 12px);
+  }
+}

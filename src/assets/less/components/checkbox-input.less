@@ -1,0 +1,88 @@
+.checkbox-input {
+  display: flex;
+
+  &__field {
+    display: none;
+  }
+
+  &__switch {
+    position: relative;
+    cursor: pointer;
+    flex: auto;
+    padding: 10px 14px 10px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    width: 100%;
+    outline: none;
+    border: 1px solid @color-gray-300;
+    border-radius: 12px;
+    background-color: #fff;
+    user-select: none;
+    font-size: 14px;
+    transition:
+      border 0.35s,
+      background 0.35s;
+
+    &:hover {
+      border-color: @color-primary;
+    }
+
+    &--justify-center {
+      justify-content: center;
+    }
+
+    &--column-center {
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    &--border-2 {
+      border-width: 2px;
+    }
+
+    &--pr-sm {
+      padding-right: 10px;
+    }
+  }
+
+  &__field:checked ~ &__switch {
+    background-color: rgba(@color-primary, 0.2);
+    border-color: @color-primary;
+  }
+
+  &__field:checked ~ &__switch--fill {
+    background-color: @color-primary;
+  }
+
+  &__field:checked ~ &__switch &__text {
+    font-weight: 500;
+  }
+
+  &__icon {
+    flex: none;
+    border-radius: 50%;
+    background-color: @color-primary;
+    opacity: 0;
+    transition: opacity 0.35s;
+
+    &--absolute {
+      position: absolute;
+      top: 4px;
+      right: 4px;
+    }
+  }
+
+  &__field:checked ~ &__switch &__icon {
+    opacity: 1;
+  }
+
+  &__field:checked ~ &__switch &__rate-num {
+    color: @color-black;
+  }
+
+  &__field:checked ~ &__switch &__rate-text {
+    color: @color-black;
+  }
+}

@@ -1,0 +1,22 @@
+.status {
+  padding: 6px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: #1a1a1a;
+  border-radius: 32px;
+  font-size: 12px;
+  line-height: 1.5;
+  color: @color-white;
+
+  &:before {
+    content: '';
+    flex: none;
+    width: 8px;
+    height: 8px;
+    display: inline-block;
+    background-color: @color-white;
+    border-radius: 50%;
+  }
+}

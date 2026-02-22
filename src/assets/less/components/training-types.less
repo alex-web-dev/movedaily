@@ -1,0 +1,25 @@
+.training-types {
+  &__header {
+    margin-bottom: 28px;
+  }
+
+  &__list {
+    &:after {
+      border-radius: 16px;
+    }
+  }
+
+  &__item {
+    width: 100%;
+
+    &:not(:first-child) {
+      margin-top: 12px;
+    }
+  }
+
+  @media (max-width: 991px) {
+    &__header {
+      display: none;
+    }
+  }
+}

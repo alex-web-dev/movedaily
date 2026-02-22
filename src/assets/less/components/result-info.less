@@ -1,0 +1,37 @@
+.result-info {
+  padding: 16px;
+  background-color: rgba(@color-primary, 0.26);
+  border-radius: 32px;
+
+  &__title {
+    margin-bottom: 16px;
+  }
+
+  &__detail {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    &:not(:first-child) {
+      margin-top: 12px;
+    }
+  }
+
+  &__detail-value {
+    padding: 3px 4px;
+    flex: none;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    background-color: @color-white;
+    border-radius: 32px;
+  }
+
+  &__detail-icon {
+    flex: none;
+  }
+
+  &--danger {
+    background-color: rgba(@color-danger, 0.21);
+  }
+}

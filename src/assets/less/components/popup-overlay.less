@@ -1,0 +1,19 @@
+.popup-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 99;
+  opacity: 0;
+  pointer-events: none;
+  background-color: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(2.5px);
+  transition: background 0.35s, opacity 0.35s;
+
+  &--active {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  &--black {
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+}

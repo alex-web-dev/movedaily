@@ -1,0 +1,53 @@
+.training-btn {
+  padding: 15px;
+  width: 130px;
+  text-align: center;
+  opacity: 0.32;
+  background-color: rgba(@color-white, 0.05);
+  border-radius: 16px;
+  border: 1px solid transparent;
+  cursor: default;
+
+  &--active {
+    background-color: #fafafa;
+    opacity: 1;
+    cursor: pointer;
+  }
+
+  &__icon-box {
+    margin: 0 auto 26px;
+    width: 68px;
+    height: 68px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__icon {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    stroke: @color-dark;
+
+    &--reverse {
+      transform: rotate(180deg);
+    }
+  }
+
+  &__text {
+    margin-top: 12px;
+  }
+
+  @media (max-width: 991px) {
+    &__icon-box {
+      margin-bottom: 16px;
+      width: 51px;
+      height: 51px;
+    }
+
+    &__icon {
+      width: 36px;
+      height: 36px;
+    }
+  }
+}

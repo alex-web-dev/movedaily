@@ -1,0 +1,21 @@
+.training-categories {
+  display: none;
+  
+  &__list {
+    margin-top: -12px;
+    margin-left: -12px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    margin-top: 12px;
+    margin-left: 12px;
+    min-height: 187px;
+    width: calc(50% - 12px);
+  }
+
+  @media (max-width: 991px) {
+    display: block;
+  }
+}

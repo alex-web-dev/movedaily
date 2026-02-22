@@ -1,0 +1,205 @@
+.dashboard {
+  position: relative;
+  padding: 48px;
+  background-color: @color-gray-50;
+  border-radius: 32px;
+  overflow: hidden;
+
+  &--pr-xs {
+    padding-right: 30px;
+  }
+
+  &__content {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__title {
+    margin-bottom: 48px;
+
+    &--mb-xs {
+      margin-bottom: 32px;
+    }
+  }
+
+  &__sections {
+    gap: 24px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    &--col-6,
+    &--xl-col-6 {
+      width: calc(50% - 12px);
+    }
+
+    &--mobile {
+      display: none;
+    }
+  }
+
+  &__muscle-stats {
+    flex: auto;
+
+    &:not(:first-child) {
+      margin-top: 24px;
+    }
+  }
+
+  &__history {
+    width: 100%;
+  }
+
+  &__profile {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1000px;
+  }
+
+  &__spheres {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  &__sphere {
+    position: absolute;
+    max-width: none;
+
+    &:nth-child(1) {
+      right: 262px;
+      top: 10px;
+      width: 126px;
+      height: 143px;
+    }
+
+    &:nth-child(2) {
+      right: -62px;
+      top: -24px;
+      width: 360px;
+      height: 409px;
+    }
+  }
+
+  &__spheres--2 &__sphere {
+    &:nth-child(1) {
+      right: 143px;
+      top: 17px;
+      width: 84px;
+      height: 95px;
+    }
+
+    &:nth-child(2) {
+      right: -43px;
+      top: 23px;
+      width: 200px;
+      height: 228px;
+    }
+  }
+
+  &__spheres--3 {
+    right: unset;
+    top: unset;
+    bottom: 0;
+    left: 0;
+  }
+
+  &__spheres--3 &__sphere {
+    right: unset;
+    top: unset;
+
+    &:nth-child(1) {
+      left: 13px;
+      bottom: -15px;
+      width: 360px;
+      height: 409px;
+    }
+
+    &:nth-child(2) {
+      left: 251px;
+      bottom: 260px;
+      width: 80px;
+      height: 91px;
+    }
+
+    &:nth-child(3) {
+      left: 182px;
+      bottom: -19px;
+      width: 200px;
+      height: 228px;
+    }
+  }
+
+  &__spheres--4 {
+    right: unset;
+    left: 0;
+  }
+
+  &__spheres--4 &__sphere {
+    right: unset;
+    top: unset;
+
+    &:nth-child(1) {
+      left: 8px;
+      top: 39px;
+      width: 360px;
+      height: 409px;
+    }
+  }
+
+  @media (max-width: 1280px) {
+    &__section {
+      &--xl-col-6 {
+        width: 100%;
+      }
+    }
+  }
+
+  @media (max-width: 991px) {
+    padding: 32px;
+
+    &__title {
+      margin-bottom: 32px;
+
+      &--mobile-hide {
+        display: none;
+      }
+    }
+
+    &__section {
+      width: 100%;
+
+      &--mobile {
+        display: flex;
+      }
+
+      &--mobile-first {
+        order: -1;
+      }
+    }
+  }
+
+  @media (max-width: 767px) {
+    padding: 32px 16px 16px;
+
+    &__title {
+      margin-bottom: 24px;
+      text-align: center;
+    }
+
+    &__muscle-stats {
+      &:not(:first-child) {
+        margin-top: 0;
+      }
+    }
+
+    &__spheres {
+      display: none;
+    }
+  }
+}

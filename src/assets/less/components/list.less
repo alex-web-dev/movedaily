@@ -1,0 +1,31 @@
+.list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+
+  li {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+
+    &:before {
+      margin-top: 10px;
+      content: '';
+      flex: none;
+      width: 6px;
+      height: 6px;
+      display: inline-block;
+      border-radius: 50%;
+      background-color: @color-second-300;
+    }
+  }
+
+  &--mark-xs {
+    li {
+      &:before {
+        margin-top: 6px;
+      }
+    }
+  }
+}

@@ -1,0 +1,203 @@
+.video-section {
+  position: relative;
+  padding: 42px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 36px;
+  background-color: @color-white;
+  color: @color-dark;
+
+  &__title {
+    margin-bottom: 32px;
+  }
+
+  &__main {
+    flex: auto;
+    display: flex;
+    gap: 32px;
+  }
+
+  &__left {
+    flex: auto;
+  }
+
+  &__video {
+    padding-top: 556px;
+    width: 100%;
+  }
+
+  &__video-info {
+    margin-top: 16px;
+  }
+
+  &__right {
+    flex: none;
+    width: 270px;
+    display: flex;
+    flex-direction: column;
+
+    &--w-lg {
+      width: 560px;
+    }
+  }
+
+  &__steps {
+    flex: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__step {
+    flex: auto;
+    display: flex;
+    flex-direction: column;
+    display: none;
+
+    &--active {
+      display: flex;
+    }
+  }
+
+  &__close {
+    position: absolute;
+    right: 17px;
+    top: 20px;
+    z-index: 1;
+  }
+
+  @media (max-width: 1280px) {
+    &__right {
+      &--w-lg {
+        width: 390px;
+      }
+    }
+
+    &__quiz {
+      padding: 0;
+    }
+  }
+
+  @media (max-width: 991px) {
+    padding: 32px 16px 24px;
+    border-radius: 0;
+    flex: auto;
+
+    &__title {
+      padding-right: 32px;
+    }
+
+    &__main {
+      flex-direction: column;
+    }
+
+    &__video {
+      padding-top: 60.8%;
+      order: 2;
+    }
+
+    &__right {
+      width: 100%;
+    }
+  }
+}
+
+.popup--black .video-section {
+  background-color: @color-black;
+  color: @color-white;
+
+  .video-info {
+    background: rgba(@color-white, 0.05);
+    border-color: rgba(@color-white, 0.1);
+
+    &__title {
+      color: @color-white;
+    }
+
+    .time-label {
+      background-color: transparent;
+      color: @color-second-300;
+
+      .icon__img {
+        stroke: @color-second-300;
+      }
+    }
+  }
+
+  .training-timer {
+    background: rgba(@color-white, 0.05);
+    border-color: rgba(@color-white, 0.1);
+  }
+
+  .training-btn {
+    background: transparent;
+    border-color: rgba(@color-white, 0.1);
+    opacity: 1;
+
+    &__icon {
+      stroke: @color-gray;
+    }
+
+    &--active {
+      border-color: transparent;
+      background: rgba(@color-white, 0.05);
+
+      .training-btn__title {
+        color: @color-white;
+      }
+
+      .training-btn__icon {
+        stroke: @color-white;
+      }
+    }
+  }
+
+  .training-process__steps-btn {
+    border-color: @color-gray-100;
+    color: @color-gray-100;
+
+    .icon {
+      svg {
+        stroke: @color-gray-100;
+      }
+    }
+  }
+
+  .training-process__footer-btn {
+    &:disabled {
+      opacity: 0.14;
+    }
+  }
+
+  .checkbox-input {
+    .checkbox-input__switch {
+      background-color: transparent;
+    }
+
+    .checkbox-input__text {
+      color: @color-gray-100;
+    }
+
+    .checkbox-input__field:checked ~ .checkbox-input__switch {
+      background-color: rgba(@color-primary, 0.2);
+    }
+
+    .checkbox-input__field:checked ~ .checkbox-input__switch .checkbox-input__rate-num {
+      color: @color-white;
+    }
+
+    .checkbox-input__field:checked ~ .checkbox-input__switch .checkbox-input__rate-text {
+      color: @color-gray-100;
+    }
+  }
+
+  .training-quiz__footer-btn {
+    &.btn--border-gray {
+      border-color: @color-gray-100;
+      color: @color-gray-100;
+
+      svg {
+        stroke: @color-gray-100;
+      }
+    }
+  }
+}

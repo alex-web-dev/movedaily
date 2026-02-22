@@ -1,0 +1,56 @@
+.select-btn {
+  padding: 4px;
+  background-color: #f1f1f1;
+  border: 0.5px solid #f1f1f1;
+  border-radius: 32px;
+
+  &--danger {
+    background-color: @color-danger;
+  }
+
+  &--primary {
+    background-color: @color-primary;
+  }
+
+  &--gray-250 {
+    background-color: @color-gray-250;
+  }
+
+  &--active,
+  &.dropdown__btn--active {
+    border-color: @color-black;
+    background-color: transparent;
+  }
+
+  &__text {
+    border: none;
+    background: transparent;
+    padding: 0;
+    outline: none;
+    width: 100%;
+    min-width: 0;
+    cursor: pointer;
+    
+    &[readonly] {
+      pointer-events: none;
+    }
+
+    &::placeholder {
+      color: @color-black;
+    }
+  }
+
+  &__content {
+    padding: 10px 12px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    background-color: @color-white;
+    border-radius: 32px;
+  }
+
+  &__icon {
+    margin-left: auto;
+    flex: none;
+  }
+}

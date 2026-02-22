@@ -1,0 +1,169 @@
+.text {
+  font-size: 16px;
+  line-height: 1.25;
+  font-weight: 400;
+
+  p {
+    &:not(:first-child) {
+      margin-top: 12px;
+    }
+  }
+
+  &__icon {
+    flex: 0 0 auto;
+
+    &:first-child:not(:last-child) {
+      margin-right: 8px;
+    }
+
+    &:last-child:not(:first-child) {
+      margin-left: 8px;
+    }
+
+    &--mx-sm {
+      &:first-child:not(:last-child) {
+        margin-right: 6px;
+      }
+
+      &:last-child:not(:first-child) {
+        margin-left: 6px;
+      }
+    }
+  }
+
+  &--rs {
+    font-family: "RS", sans-serif;
+  }
+
+  &--3xs {
+    font-size: 8px;
+  }
+
+  &--2xs {
+    font-size: 10px;
+  }
+
+  &--xs {
+    font-size: 12px;
+  }
+
+  &--sm {
+    font-size: 14px;
+  }
+
+  &--lg {
+    font-size: 18px;
+  }
+
+  &--xl {
+    font-size: 20px;
+  }
+
+  &--13 {
+    font-size: 13px;
+  }
+
+  &--26 {
+    font-size: 26px;
+  }
+
+  &--center {
+    text-align: center;
+  }
+
+  &--leading-1 {
+    line-height: 1;
+  }
+
+  &--leading-14 {
+    line-height: 1.4;
+  }
+
+  &--leading-15 {
+    line-height: 1.5;
+  }
+
+  &--leading-165 {
+    line-height: 1.65;
+  }
+
+  &--leading-2 {
+    line-height: 2;
+  }
+
+  &--medium {
+    font-weight: 500;
+  }
+
+  &--semibold {
+    font-weight: 600;
+  }
+
+  &--white {
+    color: @color-white;
+  }
+
+  &--gray {
+    color: @color-gray;
+  }
+
+  &--gray-250 {
+    color: @color-gray-250;
+  }
+
+  &--primary {
+    color: @color-primary;
+  }
+
+  &--primary-800 {
+    color: @color-primary-800;
+  }
+
+  &--danger {
+    color: @color-danger;
+  }
+
+  &--dark {
+    color: @color-dark;
+  }
+
+  &--dark-200 {
+    color: @color-dark-200;
+  }
+
+  &--dark-300 {
+    color: @color-dark-300;
+  }
+
+  &--line-through {
+    text-decoration: line-through;
+  }
+
+  &--iflex {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &--flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &--items-start {
+    align-items: flex-start;
+  }
+
+  &--justify-start {
+    justify-content: flex-start;
+  }
+
+  &--upper {
+    text-transform: uppercase;
+  }
+
+  &--hidden {
+    display: none;
+  }
+}

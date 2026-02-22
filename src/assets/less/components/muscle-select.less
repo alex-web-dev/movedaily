@@ -1,0 +1,27 @@
+.muscle-select {
+  position: relative;
+
+  &__header {
+    margin-bottom: 28px;
+  }
+
+  &__header-text {
+    margin-top: 12px;
+  }
+
+  &__close {
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    z-index: 1;
+  }
+
+  @media (max-width: 991px) {
+    &__panel {
+      .muscle-panel__body-content {
+        width: 282px;
+        max-width: 100%;
+      }
+    }
+  }
+}

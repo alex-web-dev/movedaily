@@ -1,0 +1,49 @@
+.training-progress {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  border-radius: 16px;
+  background-color: @color-gray-100;
+
+  &__title {
+    margin-bottom: 24px;
+  }
+
+  &__detail {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+  }
+
+  &__time {
+    margin-top: 24px;
+  }
+
+  &__group {
+    margin-top: 37px;
+  }
+
+  &__group-label {
+    margin-bottom: 8px;
+  }
+
+  &__group-more {
+    margin-top: 6px;
+    margin-left: 14px;
+  }
+
+  &__footer {
+    margin-top: auto;
+    padding-top: 54px;
+    text-align: center;
+  }
+
+  @media (max-width: 991px) {
+    &__footer {
+      &--mobile-hide {
+        display: none;
+      }
+    }
+  }
+}

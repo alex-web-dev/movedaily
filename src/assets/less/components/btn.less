@@ -1,0 +1,104 @@
+.btn {
+  padding: 11px 38px;
+  display: inline-block;
+  background-color: @color-primary;
+  border-radius: 32px;
+  border: 1px solid transparent;
+  text-align: center;
+  font-size: 12px;
+  font-family: "RS", sans-serif;
+  line-height: 1;
+  color: @color-dark;
+  cursor: pointer;
+  transition:
+    color 0.3s,
+    background 0.3s,
+    border 0.3s;
+
+  &.btn--disabled,
+  &:disabled {
+    cursor: default;
+    opacity: 0.4;
+  }
+
+  &--iflex {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &--justify-start {
+    justify-content: flex-start;
+  }
+
+  &--text-left {
+    text-align: left;
+  }
+
+  &--full {
+    width: 100%;
+  }
+
+  &--py-sm {
+    padding-top: 9px;
+    padding-bottom: 9px;
+  }
+
+  &--py-xl {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+
+  &--px-xs {
+    padding-left: 17px;
+    padding-right: 17px;
+  }
+
+  &--white {
+    background-color: @color-white;
+  }
+
+  &--border-gray {
+    background-color: transparent;
+    border-color: @color-gray;
+    color: @color-gray;
+  }
+
+  &--border-gray-350 {
+    background-color: transparent;
+    border-color: @color-gray;
+    color: @color-black;
+  }
+
+  &--second-200 {
+    background-color: @color-second-200;
+  }
+
+  &--transparent {
+    background-color: transparent;
+  }
+
+  &--text-sm {
+    font-size: 14px;
+  }
+
+  &--rounded-xs {
+    border-radius: 16px;
+  }
+
+  &__icon {
+    flex: 0 0 auto;
+
+    &:first-child:not(:last-child) {
+      margin-right: 8px;
+    }
+
+    &:last-child:not(:first-child) {
+      margin-left: 8px;
+    }
+  }
+
+  @media (max-width: 767px) {
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,17 @@
+.body {
+  &--lock {
+    overflow: hidden;
+
+    &[data-lock-mobile] {
+      overflow: visible;
+    }
+  }
+
+  @media (max-width: 991px) {
+    &--lock {
+      &[data-lock-mobile] {
+        overflow: hidden;
+      }
+    }
+  }
+}

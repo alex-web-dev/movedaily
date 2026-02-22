@@ -1,0 +1,36 @@
+.muscle-tooltip {
+  position: absolute;
+  z-index: 200;
+  opacity: 0;
+  transition:
+    opacity 200ms ease,
+    transform 200ms ease;
+  will-change: opacity, transform;
+  pointer-events: none;
+  font-size: 14px;
+
+  &.visible {
+    opacity: 1;
+  }
+
+  &--left {
+    transform: translateX(-100%);
+  }
+
+  &__text {
+    margin-left: 8px;
+    margin-bottom: 6px;
+    max-width: 130px;
+  }
+
+  &--left &__text {
+    position: absolute;
+    left: 0;
+    bottom: 3px;
+    margin-left: 0;
+  }
+
+  @media (max-width: 991px) {
+    display: none;
+  }
+}

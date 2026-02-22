@@ -1,0 +1,36 @@
+.subpage-header {
+  position: relative;
+  padding: 12px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 32px;
+  background-color: @color-primary-300;
+
+  &__back {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: @color-gray-100;
+  }
+
+  &__icon-box {
+    margin-top: -20px;
+    margin-bottom: 12px;
+  }
+
+  &__icon {
+    max-height: 84px;
+    max-width: 131px;
+  }
+
+  &__text {
+    margin-top: 6px;
+  }
+}

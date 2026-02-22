@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1" />
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="shortcut icon" href="assets/img/favicon.png" />
+    <title>MoveDaily | Профиль</title>
+  </head>
+
+  <body class="body">
+    <header class="header">
+      <div class="header__content">
+        <a class="logo header__logo" href="index.html">
+          <img class="logo__img" src="assets/img/logo.svg" alt="" />
+          <span class="text text--rs logo__name">MoveDaily</span>
+        </a>
+        <nav class="menu header__menu">
+          <ul class="menu__list">
+            <li class="menu__item">
+              <a class="text text--xs text--rs text--gray menu__link" href="#">Дашборд</a>
+            </li>
+            <li class="menu__item">
+              <a class="text text--xs text--rs text--gray menu__link" href="analytics.html">Аналитика</a>
+            </li>
+            <li class="menu__item">
+              <a class="text text--xs text--rs text--gray menu__link" href="history.html">История</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header__user">
+          <a class="btn btn--px-xs btn--border-gray header__user-login" href="login.html">Войти</a>
+          <a class="btn-figure header__user-profile" href="profile.html">
+            <img class="btn-figure__img" src="assets/img/icons/user-white.svg" alt="" />
+          </a>
+        </div>
+        <button class="menu-toggle header__menu-toggle js-toggle-menu">
+          <span class="menu-toggle__lines"></span>
+        </button>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="dashboard main__dashboard">
+        <div class="dashboard__content">
+          <div class="profile dashboard__profile">
+            <h1 class="title title--3 title--rs profile__title">Профиль</h1>
+            <div class="profile__content">
+              <div class="profile-info box profile__info">
+                <div class="profile-info__avatar">
+                  <img class="profile-info__avatar-img" src="assets/img/profile/user-avatar.jpg" alt="" />
+                </div>
+                <div class="profile-info__inputs">
+                  <div class="input profile-info__input">
+                    <div class="input__content">
+                      <input
+                        class="input__field input__field--gray-100 input__field--rounded-xs"
+                        type="text"
+                        value="Екатерина"
+                        placeholder="Введите имя"
+                        name="name"
+                        data-type="name" />
+                    </div>
+                    <span class="text text--danger text--xs input__error"></span>
+                  </div>
+                  <div class="input profile-info__input">
+                    <div class="input__content">
+                      <input
+                        class="input__field input__field--gray-100 input__field--rounded-xs"
+                        type="text"
+                        value="kostyk3737@gmail.com"
+                        placeholder="Введите почту"
+                        name="email"
+                        data-type="email" />
+                    </div>
+                    <span class="text text--danger text--xs input__error"></span>
+                  </div>
+                  <div class="input profile-info__input">
+                    <div class="input__content">
+                      <input
+                        class="input__field input__field--gray-100 input__field--rounded-xs js-imask"
+                        type="text"
+                        value="+7 (977) 552-22-86"
+                        placeholder="Введите номер телефона"
+                        name="phone"
+                        data-mask="phone"
+                        data-type="phone" />
+                    </div>
+                    <span class="text text--danger text--xs input__error"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="profile__main">
+                <div class="profile__sections">
+                  <div class="profile-card profile-card--pb-xs box profile__section profile__section--col-6">
+                    <div class="profile-card__header">
+                      <div class="box-header profile-card__header-main">
+                        <div class="box-header__icon">
+                          <img class="box-header__icon-img" src="assets/img/dashboard/sections-icons/access.png" alt="" />
+                        </div>
+                        <div class="box-header__info">
+                          <h2 class="text text--rs text--dark box-header__title">Тариф</h2>
+                        </div>
+                      </div>
+                      <div class="subscribe-label profile-card__header-label">
+                        <span class="text text--rs text--xs text--dark subscribe-label__text">Стандарт</span>
+                      </div>
+                    </div>
+                    <div class="profile-card__details">
+                      <div class="profile-card__detail">
+                        <div class="text text--xs text--gray text--leading-15 profile-card__detail-label">Следующее списание</div>
+                        <div class="text text--xs text--dark text--leading-15 profile-card__detail-value">1 февраля 2026</div>
+                      </div>
+                      <div class="profile-card__detail">
+                        <div class="text text--xs text--gray text--leading-15 profile-card__detail-label">План</div>
+                        <div class="text text--xs text--dark text--leading-15 profile-card__detail-value">Ежемесячный</div>
+                      </div>
+                    </div>
+                    <div class="profile-card__footer">
+                      <button class="btn btn--transparent btn--py-sm profile-card__footer-btn js-open-popup" data-popup-name="cancel-subscribe">
+                        <span class="text text--3xs text--gray btn__text">Отменить подписку</span>
+                      </button>
+                      <a class="btn profile-card__footer-btn" href="#">Изменить тариф</a>
+                    </div>
+                  </div>
+                  <div class="profile-card profile-card--pb-xs box profile__section profile__section--col-6">
+                    <div class="profile-card__header">
+                      <div class="box-header profile-card__header-main">
+                        <div class="box-header__icon">
+                          <img class="box-header__icon-img" src="assets/img/dashboard/sections-icons/money.png" alt="" />
+                        </div>
+                        <div class="box-header__info">
+                          <h2 class="text text--rs text--dark box-header__title">Способ оплаты</h2>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="profile-card__payments">
+                      <div class="profile-card__payment">
+                        <div class="profile-card__payment-main">
+                          <div class="text text--xs text--gray text--leading-15 profile-card__payment-label">Карта</div>
+                          <div class="text text--rs text--dark">**** **** **** 5555</div>
+                        </div>
+                        <a class="btn-figure btn-figure--gray-100 profile-card__payment-delete" href="#">
+                          <img class="icon icon--3xs btn-figure__img" src="assets/img/icons/close-thin.svg" alt="" />
+                        </a>
+                      </div>
+                    </div>
+                    <div class="profile-card__footer">
+                      <a class="btn btn--transparent btn--py-sm profile-card__footer-btn" href="#">
+                        <span class="text text--xs text--gray btn__text">Изменить способ оплаты</span>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="profile-card box profile__section">
+                    <a class="text text--rs text--dark text--iflex text--justify-start profile-card__logout-btn" href="#">
+                      <span class="icon text__icon">
+                        <img class="icon__img" src="assets/img/icons/exit.svg" alt="" />
+                      </span>
+                      <span>Выход</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="dashboard__spheres dashboard__spheres--2">
+          <img class="dashboard__sphere" src="assets/img/dashboard/sphere-shadow.svg" alt="" />
+          <img class="dashboard__sphere" src="assets/img/dashboard/sphere-shadow.svg" alt="" />
+        </div>
+        <div class="dashboard__spheres dashboard__spheres--4">
+          <img class="dashboard__sphere" src="assets/img/dashboard/sphere-shadow.svg" alt="" />
+        </div>
+      </div>
+    </main>
+
+    <div class="mobile-menu header__mobile-menu">
+      <div class="mobile-menu__content">
+        <div class="mobile-menu__main">
+          <ul class="mobile-menu__list">
+            <li class="mobile-menu__item">
+              <a class="text text--gray mobile-menu__link" href="index.html">Дашборд</a>
+            </li>
+            <li class="mobile-menu__item">
+              <a class="text text--gray mobile-menu__link" href="analytics.html">Аналитика</a>
+            </li>
+            <li class="mobile-menu__item">
+              <a class="text text--gray mobile-menu__link" href="history.html">История</a>
+            </li>
+            <li class="mobile-menu__item">
+              <a class="text text--gray mobile-menu__link mobile-menu__link--active" href="#">Личный кабинет</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="mobile-menu__backdrop js-close-menu"></div>
+    </div>
+
+    <div class="popup" data-popup-name="cancel-subscribe">
+      <div class="popup__body">
+        <div class="popup__dialog">
+          <div class="confirm box popup__confirm">
+            <div class="text text--rs text--dark text--center confirm__title confirm__title--sm">
+              Вы уверены, что хотите отменить подписку?
+            </div>
+            <img class="confirm__img confirm__img--w-xs" src="assets/img/dashboard/popup-confirm.png" alt="" />
+            <div class="confirm__btns">
+              <button class="btn confirm__btn confirm__btn--cancel js-close-this-popup">Нет, оставить</button>
+              <button class="btn btn--border-gray-350 confirm__btn confirm__btn--confirm">Да, отменить</button>
+            </div>
+            <button class="icon confirm__close js-close-this-popup">
+              <img class="icon__img" src="assets/img/icons/close-gray-thin.svg" alt="" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="popup" data-popup-name="subscribe-canceled">
+      <div class="popup__body">
+        <div class="popup__dialog">
+          <div class="confirm box popup__confirm">
+            <img class="confirm__img confirm__img--w-xs" src="assets/img/dashboard/popup-confirm.png" alt="" />
+            <div class="text text--rs text--dark text--center confirm__title confirm__title--sm">Подписка отменена</div>
+            <button class="icon confirm__close js-close-this-popup">
+              <img class="icon__img" src="assets/img/icons/close-gray-thin.svg" alt="" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="popup-overlay"></div>
+  </body>
+</html>

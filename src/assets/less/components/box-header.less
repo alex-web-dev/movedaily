@@ -1,0 +1,45 @@
+.box-header {
+  display: flex;
+  gap: 12px;
+
+  &--items-center {
+    align-items: center;
+  }
+
+  &__icon {
+    flex: none;
+    padding: 7px;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: @color-gray-100;
+    border-radius: 12px;
+  }
+
+  &__icon-img {
+    max-height: 100%;
+  }
+
+  &__info {
+    align-self: center;
+  }
+
+  &__text {
+    margin-top: 6px;
+  }
+
+  &__select {
+    width: 116px;
+    flex: none;
+  }
+  
+  @media (max-width: 767px) {
+    &__text {
+      &--mobile-sm {
+        max-width: 220px;
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+.checkbox-group {
+  display: flex;
+  flex-direction: column;
+  
+  &__content {
+    min-height: 0;
+    padding-right: 10px;
+  }
+
+  &__item {
+    &:not(:first-child) {
+      margin-top: 8px;
+    }
+  }
+}

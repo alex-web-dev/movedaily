@@ -1,0 +1,46 @@
+.tabs-list {
+  &--animate {
+    position: relative;
+  }
+
+  &__item {
+    display: none;
+
+    &--active {
+      display: block;
+
+      &.tabs-list__item--flex {
+        display: flex;
+      }
+    }
+  }
+
+  &--animate &__item {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition:
+      opacity 0.45s ease,
+      visibility 0.45s ease;
+
+    &.tabs-list__item--active {
+      opacity: 1;
+      visibility: visible;
+      position: relative;
+    }
+  }
+
+  @media (min-width: 992px) {
+    &--mobile {
+      display: flex;
+    }
+    
+    &--mobile &__item {
+      display: block;
+    }
+  }
+}

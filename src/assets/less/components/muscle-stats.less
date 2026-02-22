@@ -1,0 +1,76 @@
+.muscle-stats {
+  background-color: @color-gray-50;
+
+  &__content {
+    display: flex;
+    gap: 17px;
+  }
+
+  &__label {
+    position: relative;
+    z-index: 13;
+    margin-bottom: 12px;
+    min-height: 28px;
+    line-height: 14px;
+    text-align: center;
+  }
+
+  &__average {
+    flex: none;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__average-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 24px;
+    background-color: #fff;
+    flex: auto;
+  }
+
+  &__analysis {
+    flex: auto;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+  }
+
+  &__analysis-main {
+    padding: 0 12px 16px 16px;
+    flex: auto;
+    border-radius: 24px;
+    background-color: #fff;
+  }
+
+  @media (max-width: 767px) {
+    padding: 0;
+    box-shadow: none;
+
+    &__content {
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    &__average {
+      padding-top: 20px;
+      width: 100%;
+      order: 2;
+      border-radius: 24px;
+      background-color: #fff;
+    }
+
+    &__analysis {
+      padding: 28px 28px 12px;
+      border-radius: 24px;
+      background-color: #fff;
+    }
+
+    &__analysis-main {
+      padding: 0;
+    }
+  }
+}
